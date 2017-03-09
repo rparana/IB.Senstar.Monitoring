@@ -27,5 +27,6 @@ namespace IB.SM.Model.Business
         IEnumerable<ViewEvents> ListTop(int top);
         ViewEvents BuscaporID(int id);
         void ReconheceEvento(int id, string nota);
+        List<ReportViewer> GeraRelatorio(int tipo, DateTime dt_Ini, DateTime dt_Fim, List<Zone> zonas);
     }
 }

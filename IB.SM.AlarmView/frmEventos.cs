@@ -23,7 +23,7 @@ using System.Windows.Forms;
 
 namespace IB.SM.AlarmView
 {
-    public partial class frmEventos : Form
+    public partial class FrmEventos : Form
     {
         #region Variaveis globais
 
@@ -38,7 +38,7 @@ namespace IB.SM.AlarmView
         private BindingSource bs = new BindingSource();
         delegate void SetTextCallback(string texto);
 
-        private IEventsController evController { get; set; }
+        private IEventsController EvController { get; set; }
         private List<ViewEvents> dt = new List<ViewEvents>();
 
         List<PointOnZone> alarmPoints = new List<PointOnZone>();
@@ -51,10 +51,8 @@ namespace IB.SM.AlarmView
             notificaçãoVisualToolStripMenuItem.Checked = !notificaçãoVisualToolStripMenuItem.Checked;
         }
 
-        bool z144 = false, z145 = false, z146 = false;
 
-
-        public frmEventos()
+        public FrmEventos()
         {
             InitializeComponent();
         }
@@ -64,7 +62,7 @@ namespace IB.SM.AlarmView
             Thread th = new Thread(new ThreadStart(this.Thread_Conectar));
             th.Start();
             ResetaAlarmes();
-            evController = new EventsController();
+            EvController = new EventsController();
             CarregaEventos(50);
             //viewEventsBindingSource.Sort = "Data_Hora";
             AtualizaServidorComm();
@@ -74,7 +72,7 @@ namespace IB.SM.AlarmView
         {
             for (int i = 9; i <= 25; i++)
             {
-                FieldInfo fld = typeof(frmEventos).GetField("z" + i.ToString(),
+                FieldInfo fld = typeof(FrmEventos).GetField("z" + i.ToString(),
                     BindingFlags.NonPublic | BindingFlags.Instance);
                 if (fld != null)
                 {
@@ -83,7 +81,7 @@ namespace IB.SM.AlarmView
             }
             for (int i = 129; i <= 146; i++)
             {
-                FieldInfo fld = typeof(frmEventos).GetField("z" + i.ToString(),
+                FieldInfo fld = typeof(FrmEventos).GetField("z" + i.ToString(),
                     BindingFlags.NonPublic | BindingFlags.Instance);
                 if (fld != null)
                 {
@@ -147,7 +145,7 @@ namespace IB.SM.AlarmView
         {
             try
             {
-                dt = evController.ListTop(top).ToList();
+                dt = EvController.ListTop(top).ToList();
                 bs.DataSource = dt;
 
                 //viewEventsBindingSource.DataSource = dt;
@@ -169,7 +167,7 @@ namespace IB.SM.AlarmView
             {
                 if (ve.PoM)
                 {
-                    za = evController.findZonebyID(ve.IDZona);
+                    za = EvController.findZonebyID(ve.IDZona);
                     if(za!=null)
                     {
                         alarmPoints.Add(new PointOnZone { zoneID = za.NumeroZona, dist = double.Parse(ve.Distancia), ini = za.Inicio, fim = za.Fim, x1 = za.x1, y1 = za.y1, x2 = za.x2, y2 = za.y2 });
@@ -288,7 +286,7 @@ namespace IB.SM.AlarmView
             try
             {
                 ViewEvents v = new ViewEvents();
-                v = evController.BuscaporID(id);
+                v = EvController.BuscaporID(id);
                 if (v != null)
                 {
                     dt.Add(v);

@@ -71,23 +71,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAlteraSenha.cs">
+    <Compile Include="FrmAlteraSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlteraSenha.designer.cs">
-      <DependentUpon>frmAlteraSenha.cs</DependentUpon>
+    <Compile Include="FrmAlteraSenha.designer.cs">
+      <DependentUpon>FrmAlteraSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEventos.cs">
+    <Compile Include="FrmEventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEventos.Designer.cs">
-      <DependentUpon>frmEventos.cs</DependentUpon>
+    <Compile Include="FrmEventos.Designer.cs">
+      <DependentUpon>FrmEventos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReconhecer.cs">
       <SubType>Form</SubType>
@@ -116,14 +116,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAlteraSenha.resx">
-      <DependentUpon>frmAlteraSenha.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAlteraSenha.resx">
+      <DependentUpon>FrmAlteraSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEventos.resx">
-      <DependentUpon>frmEventos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEventos.resx">
+      <DependentUpon>FrmEventos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReconhecer.resx">
       <DependentUpon>FrmReconhecer.cs</DependentUpon>

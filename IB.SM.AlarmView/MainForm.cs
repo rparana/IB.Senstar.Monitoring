@@ -16,7 +16,6 @@ namespace IB.SM.AlarmView
     public partial class MainForm : Form
     {
         private IUtil util { get; set; }
-        private bool firstConfig;
 
         public int UserID;
 
@@ -43,7 +42,7 @@ namespace IB.SM.AlarmView
                 Application.Exit();
             }
             this.Visible = false;
-            frmLogin newForm = await Task.Run(() => new frmLogin());
+            FrmLogin newForm = await Task.Run(() => new FrmLogin());
             if (newForm.ShowDialog() != DialogResult.OK)
             {
                 Environment.Exit(0);
@@ -61,7 +60,7 @@ namespace IB.SM.AlarmView
 
         private async void efetuarLogoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLogin newForm = await Task.Run(() => new frmLogin());
+            FrmLogin newForm = await Task.Run(() => new FrmLogin());
             Instancia.instanciaU = new Usuario();
             Instancia.instanciaP = new Permissao();
 
@@ -80,7 +79,7 @@ namespace IB.SM.AlarmView
         {
             if (Instancia.instanciaU.Alterasenha)
             {
-                frmAlteraSenha formSenha = new frmAlteraSenha();
+                FrmAlteraSenha formSenha = new FrmAlteraSenha();
 
                 formSenha.Text = "Alterar Senha";
                 formSenha._necessitaSenha = true;
@@ -95,7 +94,7 @@ namespace IB.SM.AlarmView
         private void eventosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Cria um novo formulário 
-            frmEventos frm = new frmEventos();
+            FrmEventos frm = new FrmEventos();
             // Maximiza o formulário filho
             frm.WindowState = System.Windows.Forms.FormWindowState.Normal;
             // Define quem o pai desta janela

@@ -1,6 +1,6 @@
 ﻿namespace IB.SM.AlarmView
 {
-    partial class frmEventos
+    partial class FrmEventos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEventos));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssStatusConexao = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtvEventos = new System.Windows.Forms.DataGridView();

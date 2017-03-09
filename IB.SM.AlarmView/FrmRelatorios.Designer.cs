@@ -145,8 +145,6 @@
             // 
             this.cmbTipoRel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoRel.FormattingEnabled = true;
-            this.cmbTipoRel.Items.AddRange(new object[] {
-            "Relatório de Reconhecimento."});
             this.cmbTipoRel.Location = new System.Drawing.Point(312, 31);
             this.cmbTipoRel.Name = "cmbTipoRel";
             this.cmbTipoRel.Size = new System.Drawing.Size(212, 21);
@@ -214,6 +212,7 @@
             this.btnFechar.TabIndex = 3;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FrmRelatorios
             // 

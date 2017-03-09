@@ -1,6 +1,6 @@
 ﻿namespace IB.SM.AlarmView
 {
-    partial class frmAlteraSenha
+    partial class FrmAlteraSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlteraSenha));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlteraSenha));
             this.txtSenha2 = new System.Windows.Forms.TextBox();
             this.lblSenha2 = new System.Windows.Forms.Label();
             this.txtSenha1 = new System.Windows.Forms.TextBox();

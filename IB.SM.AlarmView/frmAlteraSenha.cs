@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace IB.SM.AlarmView
 {
-    public partial class frmAlteraSenha : Form
+    public partial class FrmAlteraSenha : Form
     {
         #region Variaveis
 
@@ -26,7 +26,7 @@ namespace IB.SM.AlarmView
 
         #region frmAlteraSenha
 
-        public frmAlteraSenha()
+        public FrmAlteraSenha()
         {
             InitializeComponent();
             this._user = new Usuario();

@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.34326cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.34326cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.23cm</Width>
+              <Width>1.7768cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95521cm</Width>
+              <Width>6.14243cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73271cm</Width>
+              <Width>2.17368cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.24842cm</Width>
+              <Width>8.44647cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -419,9 +419,9 @@
         </TablixRowHierarchy>
         <DataSetName>ReportView</DataSetName>
         <Top>0.32604cm</Top>
-        <Left>0.29104cm</Left>
+        <Left>0.02631cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.16634cm</Width>
+        <Width>27.22591cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -429,13 +429,17 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.69792in</Height>
-    <Style />
+    <Height>0.72917in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>6.5in</Width>
+  <Width>10.73958in</Width>
   <Page>
     <PageHeader>
-      <Height>2.73995cm</Height>
+      <Height>2.02557cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -446,7 +450,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>RELATÓRIO DE RECONHECIMENTO DE ALARMES</Value>
+                  <Value>=First(Fields!TipoRel.Value, "ReportView")</Value>
                   <Style>
                     <FontFamily>Verdana</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -459,10 +463,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.57891cm</Top>
-          <Left>0.29104cm</Left>
           <Height>0.59118cm</Height>
-          <Width>16.16634cm</Width>
+          <Width>27.27853cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -475,10 +477,10 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>1.50495cm</Top>
-          <Left>0.29104cm</Left>
+          <Top>0.79912cm</Top>
+          <Left>0.02631cm</Left>
           <Height>0cm</Height>
-          <Width>16.16634cm</Width>
+          <Width>27.22591cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -488,10 +490,9 @@
           </Style>
         </Line>
         <Line Name="Line2">
-          <Top>2.40185cm</Top>
-          <Left>0.29104cm</Left>
+          <Top>1.69602cm</Top>
           <Height>0cm</Height>
-          <Width>16.19265cm</Width>
+          <Width>27.27853cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -516,10 +517,10 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>1.61078cm</Top>
-          <Left>0.29104cm</Left>
+          <Top>0.95491cm</Top>
+          <Left>0.02631cm</Left>
           <Height>0.6cm</Height>
-          <Width>16.16634cm</Width>
+          <Width>27.22591cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -539,7 +540,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -561,9 +562,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox32</rd:DefaultName>
           <Top>0.17639cm</Top>
-          <Left>0.29104cm</Left>
+          <Left>0.02631cm</Left>
           <Height>0.6cm</Height>
-          <Width>16.16634cm</Width>
+          <Width>27.22591cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -581,12 +582,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

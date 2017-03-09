@@ -363,5 +363,72 @@ namespace IB.SM.Business
                 throw new Exception(ex.Message.ToString());
             }
         }
+
+        public List<ReportViewer> GeraRelatorio(int tipo, DateTime dt_Ini, DateTime dt_Fim, List<Zone> zonas)
+        {
+            List<ReportViewer> retorno = new List<ReportViewer>();
+            ReportViewer rv = new ReportViewer();
+            IEnumerable<SenstarEvents> temp = new List<SenstarEvents>();
+            string tipoRel = String.Empty;
+
+            try
+            {
+                switch (tipo)
+                {
+                    case 0:
+                    default:
+                        tipoRel = "RELATÓRIO DE EVENTOS RECONHECIDOS";
+                        foreach (Zone z in zonas)
+                        {
+                            temp = seRepository.Query(q => q.Tratado == true && q.Timestamp >= dt_Ini && q.Timestamp <= dt_Fim && q.Central == z.Central.Endereco && q.Distancia >= z.Inicio && q.Distancia <= z.Fim && q.Lado == z.Lado).OrderByDescending(i => i.Timestamp);
+                            foreach (SenstarEvents se in temp)
+                            {
+                                rv = new ReportViewer
+                                {
+                                    Dt_Inicio = dt_Ini.ToString(),
+                                    Dt_Fim = dt_Fim.ToString(),
+                                    Zona = z.Nome,
+                                    Central = z.Central.Nome,
+                                    Data_Hora = se.Timestamp,
+                                    Distancia = se.Distancia.ToString(),
+                                    Lado = se.Lado,
+                                    Nota = se.Nota,
+                                    TipoRel = tipoRel
+                                };
+                                retorno.Add(rv);
+                            }
+                        }
+                        break;
+                    case 1:
+                        tipoRel = "RELATÓRIO DE EVENTOS";
+                        foreach (Zone z in zonas)
+                        {
+                            temp = seRepository.Query(q => q.Timestamp >= dt_Ini && q.Timestamp <= dt_Fim && q.Central == z.Central.Endereco && q.Distancia >= z.Inicio && q.Distancia <= z.Fim && q.Lado == z.Lado).OrderByDescending(i => i.Timestamp);
+                            foreach (SenstarEvents se in temp)
+                            {
+                                rv = new ReportViewer
+                                {
+                                    Dt_Inicio = dt_Ini.ToString(),
+                                    Dt_Fim = dt_Fim.ToString(),
+                                    Zona = z.Nome,
+                                    Central = z.Central.Nome,
+                                    Data_Hora = se.Timestamp,
+                                    Distancia = se.Distancia.ToString(),
+                                    Lado = se.Lado,
+                                    Nota = se.Nota,
+                                    TipoRel = tipoRel
+                                };
+                                retorno.Add(rv);
+                            }
+                        }
+                        break;
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message.ToString());
+            }
+        }
     }
 }

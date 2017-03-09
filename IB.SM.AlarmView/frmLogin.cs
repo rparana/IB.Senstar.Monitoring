@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace IB.SM.AlarmView
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
 
@@ -116,7 +116,7 @@ namespace IB.SM.AlarmView
 
                     if (resultado == System.Windows.Forms.DialogResult.Yes)
                     {
-                        frmAlteraSenha formSenha = new frmAlteraSenha();
+                        FrmAlteraSenha formSenha = new FrmAlteraSenha();
 
                         formSenha.Text = "Alterar Senha";
                         formSenha._necessitaSenha = true;
